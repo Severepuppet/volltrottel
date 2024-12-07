@@ -25,7 +25,7 @@ img{
 }
 
 #header {
-    height: 23mm;
+    height: 20mm;
     width: 100%;
     background-color: rgb(54, 54, 54);
     margin-bottom: 1.5mm;
@@ -35,7 +35,7 @@ img{
 }
 
 #name{
-    width: 150mm;
+    width: 200mm;
     height: 11mm;
     background-color: white;
     color: black;
@@ -51,7 +51,7 @@ img{
 
 #qr-codeText{
     margin-left: 5mm;
-    margin-right: 10mm;
+    margin-right: 30mm;
     font-weight: 500;
     font-size: smaller;
     color: white;
