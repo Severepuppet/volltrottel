@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.a4-blatt {
+    width: 297mm; /* A4-Querformat-Breite */
+    height: 210mm; /* A4-Querformat-Höhe */
+    background: rgb(255, 255, 255);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#header {
+    height: 25mm;
+    width: 100%;
+    background-color: rgb(54, 54, 54);
+    margin-bottom: 1.5mm;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+#name{
+    width: 50mm;
+    height: 11mm;
+    background-color: white;
+    color: black;
+    margin-left: 10mm;
+    padding-left: 1mm;
+}
+
+#ersteReihe,
+#zweiteReihe,
+#dritteReihe{
+height: 42mm;
+width: 100%;    
+background: rgb(54, 54, 54);
+display: grid;
+grid-template-columns: repeat(8, 33mm) 25mm;
+column-gap: 1mm;
+grid-template-rows: 9mm repeat(4, 8mm);
+font-weight: 700;
+font-size: small;
+}
+
+#vierteReihe{
+height: 41mm;
+width: 100%;    
+background: rgb(54, 54, 54);
+display: grid;
+grid-template-columns: repeat(8, 33mm) 25mm;
+column-gap: 1mm;
+grid-template-rows: 9mm repeat(4, 8mm);
+font-weight: 700;
+font-size: small;
+margin-bottom: 1.5mm;
+}
+
+#ersteReihe div,
+#zweiteReihe div,
+#dritteReihe div,
+#vierteReihe div
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange{
+    background-color: orange;
+    color: white;
+    
+}
+
+.bright{
+    background-color: white;
+}
+
+.dark{
+    background-color: rgb(218, 218, 218);
+}
+
+.bright.VOLLTROTTEL{
+color: rgb(218, 218, 218);
+}
+
+.dark.VOLLTROTTEL{
+    color: white;
+}
+
+.punkte{
+    transform: rotate(-20deg);
+    display: inline-block;
+}
+
+#bottom{
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#buchstaben{
+    font-weight: 600;
+    font-size: large;
+    color: white;
+}
+
+#gesamtpunkte{
+    background-color: white;
+    width: 42mm;
+    height: 8mm;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    padding-left: 1mm;
+}
+
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        print-color-adjust: exact;
+    }
+
+    .a4-blatt {
+        margin: 0;
+        width: 297mm; /* Sicherstellen, dass es exakt A4-Querformat ist */
+        height: 210mm;
+        page-break-after: avoid; /* Kein Seitenumbruch */
+    }
+
+    /* Querformat erzwingen */
+    @page {
+        size: A4 landscape; /* A4 Querformat */
+        margin: 0; /* Keine zusätzlichen Druckränder */
+    }
+}
