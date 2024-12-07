@@ -1,5 +1,4 @@
-// Druckmenü automatisch öffnen
-window.onload = () => window.print();
+
 
 let string = "Geschenkidee;Heißgetränk;beim Skifahren;im Ferienhaus;auf der Piste;unter dem Weihnachtsbaum;im Schnee;Weihnachtsessen;Weihnachtslied;Weihnachtsfilm;weihnachtlich;gut zum Berg runterfahren;ist weiß;macht man im Winter;Weihnachts-märchenfigur;Weihnachtsdeko;Winterliches Tier;Wintergetränk;Backzutat;wenns kalt ist;mit der Familie;Urlaubsziel; im Weihnachts-kalender;Weihnachtsduft";
 let ungemischteTeile = string.split(";");
@@ -41,3 +40,5 @@ document.getElementById("4spalte3").textContent = teile[20];
 document.getElementById("4spalte4").textContent = teile[21];
 document.getElementById("4spalte5").textContent = teile[22];
 document.getElementById("4spalte6").textContent = teile[23];
+
+window.onload = () => window.print();
