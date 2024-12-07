@@ -35,12 +35,26 @@ img{
 }
 
 #name{
-    width: 50mm;
+    width: 150mm;
     height: 11mm;
     background-color: white;
     color: black;
     margin-left: 10mm;
     padding-left: 1mm;
+}
+
+#QR-code{
+    margin-left: 10mm;
+    height: 80%;
+    border-radius: 5%;
+}
+
+#qr-codeText{
+    margin-left: 5mm;
+    margin-right: 10mm;
+    font-weight: 500;
+    font-size: smaller;
+    color: white;
 }
 
 #ersteReihe,
@@ -110,7 +124,7 @@ color: rgb(218, 218, 218);
 #bottom{
     background-color: rgb(54, 54, 54);
     width: 100%;
-    flex-grow: 1;
+    height: 13mm;
     display: flex;
     align-items: center;
     justify-content: space-around;
