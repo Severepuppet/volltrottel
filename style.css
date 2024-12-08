@@ -6,6 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 img{
@@ -185,14 +186,16 @@ color: rgb(218, 218, 218);
     border: 4px solid ;
 }
 
-#input{
+#input,
+#input::selection{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     padding-left: 10px;
-    font-size: large;
-    font-weight: 600;
-    
+    font-size: medium;
+    font-weight: 800;
+    border: 0;
+    outline: none;
 }
 #myForm{
     grid-row: 8;
