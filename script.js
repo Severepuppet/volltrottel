@@ -1,8 +1,24 @@
 // Druckmenü automatisch öffnen
 
 
-let string = "Geschenkidee;Heißgetränk;beim Skifahren;im Ferienhaus;auf der Piste;unter dem Weihnachtsbaum;im Schnee;Weihnachtsessen;Weihnachtslied;Weihnachtsfilm;weihnachtlich;gut zum Berg runterfahren;ist weiß;macht man im Winter;Weihnachts-märchenfigur;Weihnachtsdeko;Winterliches Tier;Wintergetränk;Backzutat;wenns kalt ist;mit der Familie;Urlaubsziel; im Weihnachts-kalender;Weihnachtsduft";
-let ungemischteTeile = string.split(";");
+let stringWeihnachten = "Geschenkidee;Heißgetränk;beim Skifahren;im Ferienhaus;auf der Piste;unter dem Weihnachtsbaum;im Schnee;Weihnachtsessen;Weihnachtslied;Weihnachtsfilm;weihnachtlich;gut zum Berg runterfahren;ist weiß;macht man im Winter;Weihnachts-märchenfigur;Weihnachtsdeko;Winterliches Tier;Wintergetränk;Backzutat;wenns kalt ist;mit der Familie;Urlaubsziel; im Weihnachts-kalender;Weihnachtsduft";
+let stringClassic = "Farbe;Tier;kann man essen";
+let teile;
+let ungemischteTeile;
+
+
+
+function weihnachten(){
+    ungemischteTeile = stringWeihnachten.split(";");
+    teile = mischeArray(ungemischteTeile);
+    aktualisieren();
+}
+
+function classic(){
+    ungemischteTeile = stringClassic.split(";");
+    teile = mischeArray(ungemischteTeile);
+    aktualisieren();
+}
 
 function mischeArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -12,8 +28,9 @@ function mischeArray(arr) {
     return arr;
 }
 
-let teile = mischeArray(ungemischteTeile);
-
+function aktualisieren(){
+document.getElementById("blatt").style.display = "flex";
+document.getElementById("auswahl").style.display = "none"
 document.getElementById("1spalte1").textContent = teile[0];
 document.getElementById("1spalte2").textContent = teile[1];
 document.getElementById("1spalte3").textContent = teile[2];
@@ -41,5 +58,5 @@ document.getElementById("4spalte3").textContent = teile[20];
 document.getElementById("4spalte4").textContent = teile[21];
 document.getElementById("4spalte5").textContent = teile[22];
 document.getElementById("4spalte6").textContent = teile[23];
-
-window.onload = () => window.print();
+window.print();
+}

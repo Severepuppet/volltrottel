@@ -22,6 +22,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    display: none;
 }
 
 #header {
@@ -166,4 +167,13 @@ color: rgb(218, 218, 218);
         size: A4 landscape; /* A4 Querformat */
         margin: 0; /* Keine zusätzlichen Druckränder */
     }
+}
+
+#auswahl{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    font-weight: 600;
+    font-size: larger;
 }
