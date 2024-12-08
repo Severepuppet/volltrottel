@@ -4,19 +4,24 @@
 let stringWeihnachten = "Geschenkidee;Heißgetränk;beim Skifahren;im Ferienhaus;auf der Piste;unter dem Weihnachtsbaum;im Schnee;Weihnachtsessen;Weihnachtslied;Weihnachtsfilm;weihnachtlich;gut zum Berg runterfahren;ist weiß;macht man im Winter;Weihnachts-märchenfigur;Weihnachtsdeko;Winterliches Tier;Wintergetränk;Backzutat;wenns kalt ist;mit der Familie;Urlaubsziel; im Weihnachts-kalender;Weihnachtsduft";
 let stringClassic = "Farbe;Tier;kann man essen";
 let teile;
-let ungemischteTeile;
+let input;
 
+function getInputValue(){
+    input = document.getElementById("input").value;
+    teile = input.split(";");
+    document.getElementById("input").value = "";
+    aktualisieren();
 
+}
 
 function weihnachten(){
-    ungemischteTeile = stringWeihnachten.split(";");
-    teile = mischeArray(ungemischteTeile);
+    teile = stringWeihnachten.split(";");
     aktualisieren();
 }
 
 function classic(){
-    ungemischteTeile = stringClassic.split(";");
-    teile = mischeArray(ungemischteTeile);
+    teile = stringClassic.split(";");
+    
     aktualisieren();
 }
 
@@ -58,5 +63,9 @@ document.getElementById("4spalte3").textContent = teile[20];
 document.getElementById("4spalte4").textContent = teile[21];
 document.getElementById("4spalte5").textContent = teile[22];
 document.getElementById("4spalte6").textContent = teile[23];
-window.print();
+/*
+document.querySelectorAll(".orange").forEach(element => {
+    element.style.background = "lightblue"; // Ändert die Schriftfarbe auf Blau
+  });
+window.print();*/
 }
