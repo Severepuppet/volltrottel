@@ -8,8 +8,23 @@ let input;
 
 function getInputValue(){
     input = document.getElementById("input").value;
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("UserInput", input); // Parameter zur URL hinzufügen
+    window.history.pushState({}, "", url); // URL ohne Neuladen aktualisieren
+
     teile = input.split(";");
     document.getElementById("input").value = "";
+    aktualisieren();
+
+}
+
+Urlabrufen();
+
+function Urlabrufen(){
+    const urlParams = new URLSearchParams(window.location.search);
+    input = urlParams.get('UserInput');
+    teile = input.split(";");
     aktualisieren();
 
 }
