@@ -84,3 +84,9 @@ document.querySelectorAll(".orange").forEach(element => {
   });
 window.print();*/
 }
+
+window.addEventListener("load", () => {
+    const url = new URL(window.location.href);
+    url.search = ""; // Alle Query-Parameter entfernen
+    window.history.replaceState({}, "", url);
+});
