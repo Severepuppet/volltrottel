@@ -2,7 +2,7 @@
 
 
 let stringWeihnachten = "Geschenkidee;Heißgetränk;beim Skifahren;im Ferienhaus;auf der Piste;unter dem Weihnachtsbaum;im Schnee;Weihnachtsessen;Weihnachtslied;Weihnachtsfilm;weihnachtlich;gut zum Berg runterfahren;ist weiß;macht man im Winter;Weihnachts-märchenfigur;Weihnachtsdeko;Winterliches Tier;Wintergetränk;Backzutat;wenns kalt ist;mit der Familie;Urlaubsziel; im Weihnachts-kalender;Weihnachtsduft";
-let stringClassic = "Farbe;Tier;kann man essen;was Jeder braucht;Gewässer;dreht sich;Beruf;Männername;Grund zur Freude;kann sich öffnen;Pflanze;Obst;Eissorte;Gewürz;Frauenname;Sänger;Film;Politiker;Promi;Sportart;was Niemand braucht;Unwort;Serie;Hobby";
+let stringClassic = "Farbe;Tier;kann man essen;braucht Jeder;Gewässer;dreht sich;Beruf;Männername;Grund zur Freude;kann sich öffnen;Pflanze;Obst;Eissorte;Gewürz;Frauenname;Sänger;Film;Politiker;Promi;Sportart;braucht Niemand;Unwort;Serie;Hobby";
 let teile;
 let input;
 let stringAlles = stringWeihnachten +";"+ stringClassic;
